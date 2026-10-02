@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Solve the symbol, relay, and archive puzzles in Lab 13.">
+    <title>Puzzle Rooms | The Lockdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <a href="index.html">The Lockdown</a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html" aria-current="page">Puzzle Rooms</a></li>
+                <li><a href="clues.html">Clue Board</a></li>
+                <li><a href="unlock.html">Final Unlock</a></li>
+                <li><a href="team.html">Team Introduction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section aria-labelledby="rooms-heading">
+            <p>Investigation Pack</p>
+            <h1 id="rooms-heading">Puzzle Rooms</h1>
+            <p>
+                Each station contains one answer needed to open the exit.
+                Read the evidence, select an answer, and keep your own notes.
+                Your selections do not transfer between pages.
+            </p>
+            <nav aria-label="Puzzle stations">
+                <ul>
+                    <li><a href="#symbol-station">Symbol Station</a></li>
+                    <li><a href="#relay-station">Relay Station</a></li>
+                    <li><a href="#archive-station">Archive Station</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="symbol-station" aria-labelledby="symbol-heading">
+            <h2 id="symbol-heading">Station 1: Symbol Station</h2>
+            <p>
+                The containment console requires the symbol assigned
+                to the isolation chamber.
+            </p>
+
+            <article aria-labelledby="symbol-evidence-heading">
+                <h3 id="symbol-evidence-heading">Recovered symbol legend</h3>
+                <ul>
+                    <li>Circle: observation chamber</li>
+                    <li>Triangle: isolation chamber</li>
+                    <li>Square: storage chamber</li>
+                </ul>
+                <p>
+                    Console instruction: select the isolation chamber symbol.
+                </p>
+            </article>
+
+            <fieldset class="puzzle">
+                <legend>Which symbol unlocks the containment console?</legend>
+
+                <input type="radio" id="symbol-circle"
+                    name="symbol-answer" value="circle">
+                <label for="symbol-circle">Circle</label>
+
+                <input type="radio" id="symbol-triangle"
+                    name="symbol-answer" value="triangle">
+                <label for="symbol-triangle">Triangle</label>
+
+                <input type="radio" id="symbol-square"
+                    name="symbol-answer" value="square">
+                <label for="symbol-square">Square</label>
+            </fieldset>
+        </section>
+
+        <section id="relay-station" aria-labelledby="relay-heading">
+            <h2 id="relay-heading">Station 2: Relay Station</h2>
+            <p>
+                The emergency power panel requires three relays
+                to be activated in the correct order.
+            </p>
+
+            <article aria-labelledby="relay-evidence-heading">
+                <h3 id="relay-evidence-heading">Maintenance note</h3>
+                <ul>
+                    <li>Cooling must start before power.</li>
+                    <li>Security must start after power.</li>
+                </ul>
+                <p>Use both instructions to determine the relay order.</p>
+            </article>
+
+            <fieldset class="puzzle">
+                <legend>Which relay order restores emergency power?</legend>
+
+                <input type="radio" id="relay-power-first"
+                    name="relay-answer" value="power-cooling-security">
+                <label for="relay-power-first">
+                    Power → Cooling → Security
+                </label>
+
+                <input type="radio" id="relay-cooling-first"
+                    name="relay-answer" value="cooling-power-security">
+                <label for="relay-cooling-first">
+                    Cooling → Power → Security
+                </label>
+
+                <input type="radio" id="relay-security-first"
+                    name="relay-answer" value="security-power-cooling">
+                <label for="relay-security-first">
+                    Security → Power → Cooling
+                </label>
+            </fieldset>
+        </section>
+
+        <section id="archive-station" aria-labelledby="archive-heading">
+            <h2 id="archive-heading">Station 3: Archive Station</h2>
+            <p>
+                The archive terminal requires a three-digit code
+                from the final laboratory record.
+            </p>
+
+            <article aria-labelledby="archive-evidence-heading">
+                <h3 id="archive-evidence-heading">Final laboratory record</h3>
+                <ul>
+                    <li>Observation chamber: 4 samples</li>
+                    <li>Isolation chamber: 2 samples</li>
+                    <li>Storage chamber: 7 samples</li>
+                </ul>
+                <p>
+                    Terminal instruction: enter the sample counts in this
+                    order: isolation, storage, observation.
+                </p>
+            </article>
+
+            <fieldset class="puzzle">
+                <legend>Which code opens the archive terminal?</legend>
+
+                <input type="radio" id="archive-427"
+                    name="archive-answer" value="427">
+                <label for="archive-427">427</label>
+
+                <input type="radio" id="archive-274"
+                    name="archive-answer" value="274">
+                <label for="archive-274">274</label>
+
+                <input type="radio" id="archive-742"
+                    name="archive-answer" value="742">
+                <label for="archive-742">742</label>
+            </fieldset>
+        </section>
+
+        <section aria-labelledby="next-heading">
+            <h2 id="next-heading">Continue the investigation</h2>
+            <p>
+                Write down your three answers before moving
+                to the final unlock page.
+            </p>
+            <a href="clues.html">Examine the clue board</a>
+            <a href="unlock.html">Go to the final unlock</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Lockdown — Jeremy Henry-Atohengbe</p>
+        <a href="team.html">About the project</a>
+    </footer>
+</body>
+</html>
