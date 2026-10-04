@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Solve the symbol, relay, and archive puzzles in Lab 13.">
-    <title>Puzzle Rooms | The Lockdown</title>
+    <title>Puzzle Rooms | Lab 13</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a href="#main-content">Skip to main content</a>
 
     <header>
-        <a href="index.html">The Lockdown</a>
-
+        <a href="index.html">Lab 13</a>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -30,9 +29,9 @@
             <p>Investigation Pack</p>
             <h1 id="rooms-heading">Puzzle Rooms</h1>
             <p>
-                Each station contains one answer needed to open the exit.
-                Read the evidence, select an answer, and keep your own notes.
-                Your selections do not transfer between pages.
+                Read each station's evidence and select an answer.
+                Feedback appears beneath the choices. Write down your
+                answers because selections do not transfer between pages.
             </p>
             <nav aria-label="Puzzle stations">
                 <ul>
@@ -57,26 +56,51 @@
                     <li>Triangle: isolation chamber</li>
                     <li>Square: storage chamber</li>
                 </ul>
-                <p>
-                    Console instruction: select the isolation chamber symbol.
-                </p>
+                <p>Select the isolation chamber symbol.</p>
             </article>
 
             <fieldset class="puzzle">
                 <legend>Which symbol unlocks the containment console?</legend>
 
-                <input type="radio" id="symbol-circle"
+                <input class="answer-wrong" type="radio" id="symbol-circle"
                     name="symbol-answer" value="circle">
                 <label for="symbol-circle">Circle</label>
 
-                <input type="radio" id="symbol-triangle"
+                <input class="answer-correct" type="radio" id="symbol-triangle"
                     name="symbol-answer" value="triangle">
                 <label for="symbol-triangle">Triangle</label>
 
-                <input type="radio" id="symbol-square"
+                <input class="answer-wrong" type="radio" id="symbol-square"
                     name="symbol-answer" value="square">
                 <label for="symbol-square">Square</label>
+
+                <p class="feedback feedback-wrong">
+                    Try again. Match the requested chamber to its symbol.
+                </p>
+                <p class="feedback feedback-correct">
+                    Correct. The containment console is unlocked.
+                    Record Triangle as your first answer.
+                </p>
             </fieldset>
+
+            <aside class="assistant" aria-labelledby="symbol-assistant-heading">
+                <h3 id="symbol-assistant-heading">Lab Assistant: Symbols</h3>
+                <p>Prepared assistance — HTML and CSS simulation.</p>
+                <details>
+                    <summary>Give me a gentle hint</summary>
+                    <p>
+                        Find “isolation chamber” in the legend.
+                        Which symbol appears beside it?
+                    </p>
+                </details>
+                <details>
+                    <summary>Explain the answer</summary>
+                    <p>
+                        The legend assigns Triangle to the isolation chamber.
+                        Circle and Square belong to the other chambers.
+                    </p>
+                </details>
+            </aside>
         </section>
 
         <section id="relay-station" aria-labelledby="relay-heading">
@@ -98,24 +122,51 @@
             <fieldset class="puzzle">
                 <legend>Which relay order restores emergency power?</legend>
 
-                <input type="radio" id="relay-power-first"
+                <input class="answer-wrong" type="radio" id="relay-power-first"
                     name="relay-answer" value="power-cooling-security">
                 <label for="relay-power-first">
                     Power → Cooling → Security
                 </label>
 
-                <input type="radio" id="relay-cooling-first"
+                <input class="answer-correct" type="radio" id="relay-cooling-first"
                     name="relay-answer" value="cooling-power-security">
                 <label for="relay-cooling-first">
                     Cooling → Power → Security
                 </label>
 
-                <input type="radio" id="relay-security-first"
+                <input class="answer-wrong" type="radio" id="relay-security-first"
                     name="relay-answer" value="security-power-cooling">
                 <label for="relay-security-first">
                     Security → Power → Cooling
                 </label>
+
+                <p class="feedback feedback-wrong">
+                    Try again. Your order must satisfy both maintenance rules.
+                </p>
+                <p class="feedback feedback-correct">
+                    Correct. Emergency power is restored.
+                    Record Cooling → Power → Security as your second answer.
+                </p>
             </fieldset>
+
+            <aside class="assistant" aria-labelledby="relay-assistant-heading">
+                <h3 id="relay-assistant-heading">Lab Assistant: Relays</h3>
+                <p>Prepared assistance — HTML and CSS simulation.</p>
+                <details>
+                    <summary>Give me a gentle hint</summary>
+                    <p>
+                        Power needs one relay before it and one after it.
+                        Place power in the middle.
+                    </p>
+                </details>
+                <details>
+                    <summary>Explain the answer</summary>
+                    <p>
+                        Cooling comes before power, and security comes after
+                        power. The order is Cooling → Power → Security.
+                    </p>
+                </details>
+            </aside>
         </section>
 
         <section id="archive-station" aria-labelledby="archive-heading">
@@ -133,34 +184,60 @@
                     <li>Storage chamber: 7 samples</li>
                 </ul>
                 <p>
-                    Terminal instruction: enter the sample counts in this
-                    order: isolation, storage, observation.
+                    Enter the sample counts in this order:
+                    isolation, storage, observation.
                 </p>
             </article>
 
             <fieldset class="puzzle">
                 <legend>Which code opens the archive terminal?</legend>
 
-                <input type="radio" id="archive-427"
+                <input class="answer-wrong" type="radio" id="archive-427"
                     name="archive-answer" value="427">
                 <label for="archive-427">427</label>
 
-                <input type="radio" id="archive-274"
+                <input class="answer-correct" type="radio" id="archive-274"
                     name="archive-answer" value="274">
                 <label for="archive-274">274</label>
 
-                <input type="radio" id="archive-742"
+                <input class="answer-wrong" type="radio" id="archive-742"
                     name="archive-answer" value="742">
                 <label for="archive-742">742</label>
+
+                <p class="feedback feedback-wrong">
+                    Try again. Follow the terminal's chamber order,
+                    rather than the order of the records.
+                </p>
+                <p class="feedback feedback-correct">
+                    Correct. The archive terminal is unlocked.
+                    Record 274 as your third answer.
+                </p>
             </fieldset>
+
+            <aside class="assistant" aria-labelledby="archive-assistant-heading">
+                <h3 id="archive-assistant-heading">Lab Assistant: Archive</h3>
+                <p>Prepared assistance — HTML and CSS simulation.</p>
+                <details>
+                    <summary>Give me a gentle hint</summary>
+                    <p>
+                        Start with the isolation chamber's sample count,
+                        then find storage and observation.
+                    </p>
+                </details>
+                <details>
+                    <summary>Explain the answer</summary>
+                    <p>
+                        Isolation has 2 samples, storage has 7, and
+                        observation has 4. Reading them in the requested
+                        order produces 274.
+                    </p>
+                </details>
+            </aside>
         </section>
 
         <section aria-labelledby="next-heading">
             <h2 id="next-heading">Continue the investigation</h2>
-            <p>
-                Write down your three answers before moving
-                to the final unlock page.
-            </p>
+            <p>Write down your three answers before leaving this page.</p>
             <a href="clues.html">Examine the clue board</a>
             <a href="unlock.html">Go to the final unlock</a>
         </section>

@@ -235,6 +235,89 @@ footer p {
     margin: 0;
 }
 
+.puzzle {
+    min-width: 0;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.puzzle legend {
+    padding-inline: 0.5rem;
+    font-weight: bold;
+}
+
+.puzzle input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.75rem 0.5rem 0.75rem 0;
+    accent-color: var(--accent);
+    vertical-align: middle;
+}
+
+.puzzle label {
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.puzzle label::after {
+    content: "";
+    display: block;
+}
+
+.puzzle input:checked + label {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.feedback {
+    display: none;
+    margin-bottom: 0;
+    padding: 1rem;
+    border: 2px solid currentColor;
+    border-radius: var(--radius);
+}
+
+.feedback-wrong {
+    color: var(--warning);
+}
+
+.feedback-correct {
+    color: var(--accent);
+}
+
+.answer-wrong:checked ~ .feedback-wrong,
+.answer-correct:checked ~ .feedback-correct {
+    display: block;
+}
+
+.assistant {
+    padding: 1.25rem;
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--surface-raised);
+}
+
+.assistant > p {
+    color: var(--muted);
+}
+
+.assistant details + details {
+    margin-top: 0.75rem;
+}
+
+.assistant summary {
+    padding-block: 0.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.assistant details[open] summary {
+    color: var(--warning);
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;
