@@ -318,6 +318,73 @@ footer p {
     color: var(--warning);
 }
 
+.clue-board {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.clue-board legend {
+    padding-inline: 0.5rem;
+    font-weight: bold;
+}
+
+.clue-board > input {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.75rem 0.5rem 0.75rem 0;
+    accent-color: var(--accent);
+    vertical-align: middle;
+}
+
+.clue-board > label {
+    display: inline-block;
+    margin-right: 1rem;
+    padding-block: 0.5rem;
+    cursor: pointer;
+}
+
+.clue-board > input:checked + label {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.evidence-card > p:first-child {
+    color: var(--muted);
+}
+
+.evidence-card summary {
+    padding-block: 0.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.evidence-card details[open] summary {
+    color: var(--warning);
+}
+
+#filter-symbol:checked ~ .evidence-grid .evidence-card,
+#filter-relay:checked ~ .evidence-grid .evidence-card,
+#filter-archive:checked ~ .evidence-grid .evidence-card {
+    display: none;
+}
+
+#filter-symbol:checked ~ .evidence-grid .evidence-symbol,
+#filter-relay:checked ~ .evidence-grid .evidence-relay,
+#filter-archive:checked ~ .evidence-grid .evidence-archive {
+    display: block;
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;

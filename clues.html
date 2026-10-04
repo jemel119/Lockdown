@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Examine the recovered evidence for Lab 13's three puzzle stations.">
+    <title>Clue Board | Lab 13</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <a href="index.html">Lab 13</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Puzzle Rooms</a></li>
+                <li><a href="clues.html" aria-current="page">Clue Board</a></li>
+                <li><a href="unlock.html">Final Unlock</a></li>
+                <li><a href="team.html">Team Introduction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section aria-labelledby="clues-heading">
+            <p>Recovered laboratory evidence</p>
+            <h1 id="clues-heading">Clue Board</h1>
+            <p>
+                Filter the evidence by station. Open each record to examine
+                its contents, then return to the matching puzzle.
+            </p>
+        </section>
+
+        <section aria-labelledby="evidence-heading">
+            <h2 id="evidence-heading">Investigation records</h2>
+
+            <fieldset class="clue-board">
+                <legend>Filter evidence by station</legend>
+
+                <input type="radio" id="filter-all"
+                    name="clue-filter" value="all" checked>
+                <label for="filter-all">All evidence</label>
+
+                <input type="radio" id="filter-symbol"
+                    name="clue-filter" value="symbol">
+                <label for="filter-symbol">Symbols</label>
+
+                <input type="radio" id="filter-relay"
+                    name="clue-filter" value="relay">
+                <label for="filter-relay">Relays</label>
+
+                <input type="radio" id="filter-archive"
+                    name="clue-filter" value="archive">
+                <label for="filter-archive">Archive</label>
+
+                <div class="evidence-grid">
+                    <article class="evidence-card evidence-symbol">
+                        <p>Symbol Station</p>
+                        <h3>Chamber identification sheet</h3>
+                        <details>
+                            <summary>Examine the record</summary>
+                            <ul>
+                                <li>Circle: observation chamber</li>
+                                <li>Triangle: isolation chamber</li>
+                                <li>Square: storage chamber</li>
+                            </ul>
+                            <p>
+                                The containment console requests the
+                                isolation chamber symbol.
+                            </p>
+                        </details>
+                        <a href="rooms.html#symbol-station">
+                            Return to Symbol Station
+                        </a>
+                    </article>
+
+                    <article class="evidence-card evidence-relay">
+                        <p>Relay Station</p>
+                        <h3>Emergency maintenance note</h3>
+                        <details>
+                            <summary>Examine the record</summary>
+                            <ul>
+                                <li>Cooling must start before power.</li>
+                                <li>Security must start after power.</li>
+                            </ul>
+                            <p>
+                                Both conditions must hold when the
+                                emergency relays are activated.
+                            </p>
+                        </details>
+                        <a href="rooms.html#relay-station">
+                            Return to Relay Station
+                        </a>
+                    </article>
+
+                    <article class="evidence-card evidence-archive">
+                        <p>Archive Station</p>
+                        <h3>Final sample inventory</h3>
+                        <details>
+                            <summary>Examine the record</summary>
+                            <ul>
+                                <li>Observation chamber: 4 samples</li>
+                                <li>Isolation chamber: 2 samples</li>
+                                <li>Storage chamber: 7 samples</li>
+                            </ul>
+                            <p>
+                                The terminal requests the counts in this
+                                order: isolation, storage, observation.
+                            </p>
+                        </details>
+                        <a href="rooms.html#archive-station">
+                            Return to Archive Station
+                        </a>
+                    </article>
+                </div>
+            </fieldset>
+        </section>
+
+        <section aria-labelledby="notes-heading">
+            <h2 id="notes-heading">Keep your investigation notes</h2>
+            <p>
+                Record the symbol, relay order, and archive code.
+                Changing pages does not transfer your puzzle selections.
+            </p>
+            <a href="rooms.html">Continue solving the puzzles</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Lockdown — Jeremy Henry-Atohengbe</p>
+        <a href="team.html">About the project</a>
+    </footer>
+</body>
+</html>
