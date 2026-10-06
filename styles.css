@@ -385,6 +385,134 @@ footer p {
     display: block;
 }
 
+.button {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 0.4rem;
+    background: var(--accent);
+    color: var(--background);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover {
+    border-color: var(--warning);
+    background: var(--warning);
+}
+
+.exit-display {
+    margin-block: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-raised);
+    text-align: center;
+}
+
+.exit-display p {
+    margin-inline: auto;
+}
+
+.exit-doorway {
+    position: relative;
+    width: min(100%, 14rem);
+    height: 17rem;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 4px solid var(--border);
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: var(--accent);
+}
+
+.exit-light {
+    display: block;
+    padding-top: 1rem;
+    color: var(--background);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.exit-door {
+    position: absolute;
+    inset: 0;
+    border: 4px solid var(--border);
+    background: linear-gradient(
+        90deg,
+        var(--surface),
+        var(--surface-raised)
+    );
+}
+
+.exit-door::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 0.5rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    background: var(--warning);
+}
+
+.exit-locked,
+.exit-error {
+    color: var(--warning);
+}
+
+.exit-error,
+.exit-success {
+    display: none;
+}
+
+.exit-success {
+    color: var(--accent);
+}
+
+.unlock-panel:has([name="exit-symbol"]:checked):has(
+    [name="exit-relay"]:checked
+):has([name="exit-archive"]:checked) .exit-locked {
+    display: none;
+}
+
+.unlock-panel:has([name="exit-symbol"]:checked):has(
+    [name="exit-relay"]:checked
+):has([name="exit-archive"]:checked) .exit-error {
+    display: block;
+}
+
+.unlock-panel:has(#exit-triangle:checked):has(
+    #exit-cooling-first:checked
+):has(#exit-274:checked) .exit-error {
+    display: none;
+}
+
+.unlock-panel:has(#exit-triangle:checked):has(
+    #exit-cooling-first:checked
+):has(#exit-274:checked) .exit-success {
+    display: block;
+}
+
+.unlock-panel:has(#exit-triangle:checked):has(
+    #exit-cooling-first:checked
+):has(#exit-274:checked) .exit-door {
+    transform: translateY(-100%);
+    animation: door-open 1.2s ease-in-out both;
+}
+
+@keyframes door-open {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Combine your three puzzle answers to escape Lab 13.">
+    <title>Final Unlock | Lab 13</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <a href="index.html">Lab 13</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Puzzle Rooms</a></li>
+                <li><a href="clues.html">Clue Board</a></li>
+                <li><a href="unlock.html" aria-current="page">Final Unlock</a></li>
+                <li><a href="team.html">Team Introduction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section aria-labelledby="unlock-heading">
+            <p>Emergency exit terminal</p>
+            <h1 id="unlock-heading">Final Unlock</h1>
+            <p>
+                Select the three answers from your investigation notes.
+                The exit opens automatically when all three are correct.
+            </p>
+            <p>
+                Your selections from the puzzle rooms do not transfer here.
+                This terminal is an HTML and CSS simulation.
+            </p>
+        </section>
+
+        <section aria-labelledby="terminal-heading">
+            <h2 id="terminal-heading">Restore exit access</h2>
+
+            <form class="unlock-panel">
+                <fieldset class="puzzle">
+                    <legend>1. Containment symbol</legend>
+
+                    <input type="radio" id="exit-circle"
+                        name="exit-symbol" value="circle">
+                    <label for="exit-circle">Circle</label>
+
+                    <input type="radio" id="exit-triangle"
+                        name="exit-symbol" value="triangle">
+                    <label for="exit-triangle">Triangle</label>
+
+                    <input type="radio" id="exit-square"
+                        name="exit-symbol" value="square">
+                    <label for="exit-square">Square</label>
+                </fieldset>
+
+                <fieldset class="puzzle">
+                    <legend>2. Emergency relay order</legend>
+
+                    <input type="radio" id="exit-power-first"
+                        name="exit-relay" value="power-cooling-security">
+                    <label for="exit-power-first">
+                        Power → Cooling → Security
+                    </label>
+
+                    <input type="radio" id="exit-cooling-first"
+                        name="exit-relay" value="cooling-power-security">
+                    <label for="exit-cooling-first">
+                        Cooling → Power → Security
+                    </label>
+
+                    <input type="radio" id="exit-security-first"
+                        name="exit-relay" value="security-power-cooling">
+                    <label for="exit-security-first">
+                        Security → Power → Cooling
+                    </label>
+                </fieldset>
+
+                <fieldset class="puzzle">
+                    <legend>3. Archive code</legend>
+
+                    <input type="radio" id="exit-427"
+                        name="exit-archive" value="427">
+                    <label for="exit-427">427</label>
+
+                    <input type="radio" id="exit-274"
+                        name="exit-archive" value="274">
+                    <label for="exit-274">274</label>
+
+                    <input type="radio" id="exit-742"
+                        name="exit-archive" value="742">
+                    <label for="exit-742">742</label>
+                </fieldset>
+
+                <div class="exit-display">
+                    <div class="exit-doorway" aria-hidden="true">
+                        <span class="exit-light">EXIT</span>
+                        <div class="exit-door"></div>
+                    </div>
+
+                    <p class="exit-locked">
+                        Exit locked. Select all three answers.
+                    </p>
+                    <p class="exit-error">
+                        Exit locked. At least one answer is incorrect.
+                        Review your investigation notes and try again.
+                    </p>
+                    <div class="exit-success">
+                        <h3>Exit unlocked</h3>
+                        <p>
+                            Containment confirmed. Emergency power restored.
+                            Archive verified. You escaped Lab 13.
+                        </p>
+                    </div>
+                </div>
+
+                <button class="button" type="reset">Reset selections</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="review-heading">
+            <h2 id="review-heading">Need to review the evidence?</h2>
+            <p>Return to a station or examine its recovered records.</p>
+            <a href="rooms.html">Return to the puzzle rooms</a>
+            <a href="clues.html">Open the clue board</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lab 13: The Lockdown — Jeremy Henry-Atohengbe</p>
+        <a href="team.html">About the project</a>
+    </footer>
+</body>
+</html>
