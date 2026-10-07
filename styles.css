@@ -353,7 +353,10 @@ footer p {
 
 .evidence-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 16rem), 1fr)
+    );
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -549,6 +552,16 @@ section:has(.answer-wrong:checked)
 section:has(.answer-correct:checked)
     > .recommendation .recommendation-next {
     display: block;
+}
+
+dt {
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+dd {
+    margin: 0.25rem 0 0;
 }
 
 @media (max-width: 768px) {
