@@ -513,6 +513,44 @@ footer p {
     }
 }
 
+.recommendation {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--warning);
+    border-radius: var(--radius);
+    background: var(--surface-raised);
+}
+
+.recommendation > p {
+    color: var(--muted);
+}
+
+.recommendation a {
+    display: inline-block;
+    padding-block: 0.5rem;
+    font-weight: bold;
+}
+
+.recommendation-retry,
+.recommendation-next {
+    display: none;
+}
+
+section:has(.puzzle input:checked)
+    > .recommendation .recommendation-start {
+    display: none;
+}
+
+section:has(.answer-wrong:checked)
+    > .recommendation .recommendation-retry {
+    display: block;
+}
+
+section:has(.answer-correct:checked)
+    > .recommendation .recommendation-next {
+    display: block;
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;

@@ -101,6 +101,48 @@
                     </p>
                 </details>
             </aside>
+
+            <aside class="recommendation"
+                aria-labelledby="symbol-recommendation-heading">
+                <h3 id="symbol-recommendation-heading">Recommended next step</h3>
+                <p>
+                    Prepared recommendations based on this station's
+                    selected answer.
+                </p>
+
+                <div class="recommendation-start">
+                    <p>Examine the chamber identification sheet.</p>
+                    <p>Reason: no answer has been selected at this station.</p>
+                    <p>Confidence: medium — a starting suggestion.</p>
+                    <a href="clues.html">Open the clue board</a>
+                </div>
+
+                <div class="recommendation-retry">
+                    <p>Review the isolation chamber entry.</p>
+                    <p>
+                        Reason: the selected symbol belongs to another chamber.
+                    </p>
+                    <p>
+                        Confidence: high — the legend identifies each chamber.
+                    </p>
+                    <a href="#symbol-assistant-heading">
+                        Review the symbol hints
+                    </a>
+                </div>
+
+                <div class="recommendation-next">
+                    <p>Record Triangle, then investigate the relays.</p>
+                    <p>
+                        Reason: your selected symbol matches
+                        the isolation chamber.
+                    </p>
+                    <p>
+                        Confidence: high — the answer matches
+                        the recovered legend.
+                    </p>
+                    <a href="#relay-station">Go to Relay Station</a>
+                </div>
+            </aside>
         </section>
 
         <section id="relay-station" aria-labelledby="relay-heading">
@@ -167,6 +209,55 @@
                     </p>
                 </details>
             </aside>
+
+            <aside class="recommendation"
+                aria-labelledby="relay-recommendation-heading">
+                <h3 id="relay-recommendation-heading">Recommended next step</h3>
+                <p>
+                    Prepared recommendations based on this station's
+                    selected answer.
+                </p>
+
+                <div class="recommendation-start">
+                    <p>Read both conditions in the maintenance note.</p>
+                    <p>
+                        Reason: no relay order has been selected
+                        at this station.
+                    </p>
+                    <p>Confidence: medium — a starting suggestion.</p>
+                    <a href="clues.html">Open the clue board</a>
+                </div>
+
+                <div class="recommendation-retry">
+                    <p>Check which relay must come before and after power.</p>
+                    <p>
+                        Reason: the selected order violates
+                        a maintenance condition.
+                    </p>
+                    <p>
+                        Confidence: high — both conditions must be satisfied.
+                    </p>
+                    <a href="#relay-assistant-heading">
+                        Review the relay hints
+                    </a>
+                </div>
+
+                <div class="recommendation-next">
+                    <p>
+                        Record Cooling → Power → Security,
+                        then investigate the archive.
+                    </p>
+                    <p>
+                        Reason: your relay order satisfies
+                        both maintenance conditions.
+                    </p>
+                    <p>
+                        Confidence: high — the order matches
+                        the recovered note.
+                    </p>
+                    <a href="#archive-station">Go to Archive Station</a>
+                </div>
+            </aside>
         </section>
 
         <section id="archive-station" aria-labelledby="archive-heading">
@@ -232,6 +323,56 @@
                         order produces 274.
                     </p>
                 </details>
+            </aside>
+
+            <aside class="recommendation"
+                aria-labelledby="archive-recommendation-heading">
+                <h3 id="archive-recommendation-heading">Recommended next step</h3>
+                <p>
+                    Prepared recommendations based on this station's
+                    selected answer.
+                </p>
+
+                <div class="recommendation-start">
+                    <p>Match each requested chamber to its sample count.</p>
+                    <p>
+                        Reason: no archive code has been selected
+                        at this station.
+                    </p>
+                    <p>Confidence: medium — a starting suggestion.</p>
+                    <a href="clues.html">Open the clue board</a>
+                </div>
+
+                <div class="recommendation-retry">
+                    <p>
+                        Read the counts in isolation, storage,
+                        observation order.
+                    </p>
+                    <p>
+                        Reason: the selected code does not match
+                        the terminal's order.
+                    </p>
+                    <p>
+                        Confidence: high — the inventory provides
+                        all three counts.
+                    </p>
+                    <a href="#archive-assistant-heading">
+                        Review the archive hints
+                    </a>
+                </div>
+
+                <div class="recommendation-next">
+                    <p>
+                        Record 274. If you have all three answers,
+                        visit the exit terminal.
+                    </p>
+                    <p>
+                        Reason: your archive code matches
+                        the requested chamber order.
+                    </p>
+                    <p>Confidence: high for this station's answer only.</p>
+                    <a href="unlock.html">Go to Final Unlock</a>
+                </div>
             </aside>
         </section>
 
