@@ -1,8 +1,16 @@
+@font-face {
+    font-family: "Super Mario";
+    src: url("SuperMario256.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     color-scheme: dark;
     --background: #10171c;
-    --surface: #1b272f;
-    --surface-raised: #24343e;
+    --surface: rgb(27 39 47 / 94%);
+    --surface-raised: rgb(36 52 62 / 94%);
     --text: #f1f5f7;
     --muted: #c0cdd4;
     --accent: #72e0d1;
@@ -19,11 +27,40 @@
 
 body {
     margin: 0;
-    background: var(--background);
+    background-color: var(--background);
+    background-image:
+        linear-gradient(
+            rgb(16 23 28 / 78%),
+            rgb(16 23 28 / 78%)
+        ),
+        var(--page-background, none);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+.page-home {
+    --page-background: url("lab.avif");
+}
+
+.page-rooms {
+    --page-background: url("puzzle.jpg");
+}
+
+.page-clues {
+    --page-background: url("clue.jpg");
+}
+
+.page-unlock {
+    --page-background: url("exit.avif");
+}
+
+.page-team {
+    --page-background: url("team.webp");
 }
 
 a {
@@ -97,6 +134,7 @@ nav a {
     border-radius: 0.4rem;
     color: var(--text);
     text-decoration: none;
+    overflow-wrap: anywhere;
     transition: background-color 180ms ease, color 180ms ease;
 }
 
@@ -139,6 +177,16 @@ h2 {
 h3 {
     margin-top: 0;
     font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+header > a,
+nav a {
+    font-family: "Super Mario", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.04em;
 }
 
 p {
@@ -437,6 +485,7 @@ footer p {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.2em;
+    animation: status-pulse 2.5s ease-in-out 2;
 }
 
 .exit-door {
@@ -562,10 +611,6 @@ dt {
 
 dd {
     margin: 0.25rem 0 0;
-}
-
-.exit-light {
-    animation: status-pulse 2.5s ease-in-out 2;
 }
 
 .evidence-card details[open] > :not(summary) {
