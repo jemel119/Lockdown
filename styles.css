@@ -564,6 +564,37 @@ dd {
     margin: 0.25rem 0 0;
 }
 
+.exit-light {
+    animation: status-pulse 2.5s ease-in-out 2;
+}
+
+.evidence-card details[open] > :not(summary) {
+    animation: clue-reveal 350ms ease-out both;
+}
+
+@keyframes status-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+}
+
+@keyframes clue-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
     header {
         align-items: flex-start;
