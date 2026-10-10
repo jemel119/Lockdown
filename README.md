@@ -195,7 +195,7 @@ Manual checks were completed in the local browser.
 | Reduced-motion behavior | Passed |
 | HTML validation for all five pages | No errors reported |
 | CSS validation | No errors reported |
-| Contrast verification | Pending |
+| Text contrast verification | Passed by CSS color calculation; checked pairs exceed 4.5:1, including the brightest background allowed by the overlay |
 | Live Codd verification | Pending |
 
 ## Development Process
@@ -231,5 +231,5 @@ The interface decorations and exit-door illustration are created with CSS.
 OpenAI ChatGPT/Codex provided assistance with proposal drafting, worklow planning, implementation guidance, testing checklists, and documentation drafts.
 
 I selected the project direction and assets, applied the code locally, implemented the code, managed commits, and performed the reported browser checks.
-
+r
 The assistant and recommendation panels within the website use prepared content and do not connect to a live AI service.
