@@ -20,7 +20,7 @@ An HTML and CSS escape room set in an abandoned laboratory. Investigate three pu
 ## Links
 
 - GitHub: https://github.com/jemel119/Lockdown
-- Live Codd website: 
+- Live Codd website: https://codd.cs.gsu.edu/~jhenryatohengbe1/web/pw/pw1/index.html
 - Presentation recording: 
 - Trello board: https://trello.com/b/hynnKHDu/lab-13-the-lockdown
 
@@ -196,7 +196,7 @@ Manual checks were completed in the local browser.
 | HTML validation for all five pages | No errors reported |
 | CSS validation | No errors reported |
 | Text contrast verification | Passed by CSS color calculation; checked pairs exceed 4.5:1, including the brightest background allowed by the overlay |
-| Live Codd verification | Pending |
+| Live Codd verification | Passed |
 
 ## Development Process
 
