@@ -21,7 +21,7 @@ An HTML and CSS escape room set in an abandoned laboratory. Investigate three pu
 
 - GitHub: https://github.com/jemel119/Lockdown
 - Live Codd website: https://codd.cs.gsu.edu/~jhenryatohengbe1/web/pw/pw1/index.html
-- Presentation recording: 
+- Presentation recording: https://youtu.be/2idjxeJuKNc
 - Trello board: https://trello.com/b/hynnKHDu/lab-13-the-lockdown
 
 ## Run Locally
